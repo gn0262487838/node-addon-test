@@ -1,0 +1,82 @@
+﻿// Created by Microsoft (R) C/C++ Compiler Version 14.16.27051.0 (d12edad9).
+//
+// c:\users\jack hu\documents\test\comdll_test\build\release\obj\addon\src\cshisx.tlh
+//
+// C++ source equivalent of Win32 type library C:/NHI/LIB/csHisX.dll
+// compiler-generated file created 08/25/24 at 18:31:32 - DO NOT EDIT!
+
+#pragma once
+#pragma pack(push, 8)
+
+#include <comdef.h>
+
+namespace CSHISXLib {
+
+//
+// Forward references and typedefs
+//
+
+struct __declspec(uuid("2a4decf2-a654-48fc-835d-3a0015c746fe"))
+/* LIBID */ __CSHISXLib;
+struct /* coclass */ nhicshisx;
+struct __declspec(uuid("288efdec-3cf0-4f6c-8473-4e4cd47a93c7"))
+/* dual interface */ Inhicshisx;
+
+//
+// Smart pointer typedef declarations
+//
+
+_COM_SMARTPTR_TYPEDEF(Inhicshisx, __uuidof(Inhicshisx));
+
+//
+// Type library items
+//
+
+struct __declspec(uuid("2f5aecd5-b5cd-41e1-8265-e2f6aa4548cb"))
+nhicshisx;
+    // [ default ] interface Inhicshisx
+
+struct __declspec(uuid("288efdec-3cf0-4f6c-8473-4e4cd47a93c7"))
+Inhicshisx : IDispatch
+{
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall GetCsVersion (
+        /*[out,retval]*/ BSTR * strVersion ) = 0;
+      virtual HRESULT __stdcall GetCsReaderType (
+        /*[out,retval]*/ BSTR * strType ) = 0;
+      virtual HRESULT __stdcall GetAllCardsInfoInCS (
+        /*[out,retval]*/ BSTR * strInfo ) = 0;
+      virtual HRESULT __stdcall CsVerifyHPCPin (
+        /*[out,retval]*/ BSTR * strRet ) = 0;
+      virtual HRESULT __stdcall CsVerifyHPCPinParam (
+        /*[in]*/ BSTR strPIN,
+        /*[out,retval]*/ BSTR * strRet ) = 0;
+      virtual HRESULT __stdcall CsVerifyHCPin (
+        /*[out,retval]*/ BSTR * strRet ) = 0;
+      virtual HRESULT __stdcall CsVerifyHCPinParam (
+        /*[in]*/ BSTR strPIN,
+        /*[out,retval]*/ BSTR * strRet ) = 0;
+      virtual HRESULT __stdcall VPNGetRandomX (
+        /*[out,retval]*/ BSTR * strRandom ) = 0;
+      virtual HRESULT __stdcall VPNH_SignX (
+        /*[in]*/ BSTR strRandom,
+        /*[in]*/ BSTR strCardType,
+        /*[in]*/ BSTR strServiceType,
+        /*[out,retval]*/ BSTR * strRet ) = 0;
+      virtual HRESULT __stdcall CsVerifyHCAPinParam (
+        /*[in]*/ BSTR strPIN,
+        /*[out,retval]*/ BSTR * strRet ) = 0;
+      virtual HRESULT __stdcall GetSAMCardInfoInCS (
+        /*[out,retval]*/ BSTR * strInfo ) = 0;
+      virtual HRESULT __stdcall GetHCCardInfoInCS (
+        /*[out,retval]*/ BSTR * strInfo ) = 0;
+      virtual HRESULT __stdcall GetHPCCardInfoInCS (
+        /*[out,retval]*/ BSTR * strInfo ) = 0;
+};
+
+} // namespace CSHISXLib
+
+#pragma pack(pop)
